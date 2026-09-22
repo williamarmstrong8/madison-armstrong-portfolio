@@ -1,0 +1,266 @@
+import Image from "next/image";
+import Reveal from "./Reveal";
+
+const model = [
+  {
+    title: "Reimagine",
+    points: [
+      "Take back pre-loved Mischief Maison garments from customers",
+      "Repurpose fabrics into patchwork, panels, color blocks, and new silhouettes",
+      "Reuse buttons and zippers; transform garments into accessory pieces",
+      "Release limited-edition, one-of-a-kind pieces",
+    ],
+  },
+  {
+    title: "Redirect",
+    points: [
+      "Partner with organizations supporting women entering the workforce",
+      "Provide business attire to women who lack the resources for it",
+      "Lend clothing for job interviews and key moments, then return it for the next woman",
+    ],
+  },
+  {
+    title: "Benefit",
+    points: [
+      "Customers receive store credit for every pre-loved item they bring back",
+      "Keeps the product line fresh, mysterious, and exclusive",
+      "Contributes to a sustainable fashion industry and creates opportunities for women",
+      "Builds community, customer loyalty, and positive change",
+    ],
+  },
+];
+
+const marketing = [
+  { title: "Social Media", body: "Presence across Pinterest, Instagram, and TikTok, meeting the customer where she looks for inspiration." },
+  { title: "Pop-ups", body: "Garments featured at pop-up shops in collaboration with philanthropic organizations for women in business." },
+  { title: "Influencers", body: "Creators wear the pieces and share them, alongside stories from women who have benefited from the redirect initiatives." },
+  { title: "Advertising", body: "Building traction through online content and placement in magazines and online advertisements." },
+];
+
+const forecast: [string, string, string, string][] = [
+  ["Total orders", "750", "1,500", "2,750"],
+  ["Average order value", "$200", "$215", "$230"],
+  ["Gross revenue", "$150,000", "$322,500", "$632,500"],
+  ["Cost of goods sold", "$57,000", "$122,550", "$240,350"],
+  ["Gross profit", "$93,000", "$199,950", "$392,150"],
+  ["Operating expenses", "$120,000", "$140,000", "$210,000"],
+  ["Net profit / loss", "($27,000)", "$59,950", "$182,150"],
+];
+
+const funding = [
+  { label: "Marketing", amount: "$50,000", pct: "33.3%" },
+  { label: "E-Commerce & Operations", amount: "$40,000", pct: "26.7%" },
+  { label: "Employees", amount: "$30,000", pct: "20%" },
+  { label: "Working Capital", amount: "$30,000", pct: "20%" },
+];
+
+const mood = [
+  { src: "/images/mood-1.jpg", alt: "Denim jacket with fringe detailing, product line inspiration" },
+  { src: "/images/mood-2.jpg", alt: "Street style look with a fur coat and denim, product line inspiration" },
+  { src: "/images/mood-3.jpg", alt: "Tailored neutral outfit at an appointment, product line inspiration" },
+  { src: "/images/mood-4.jpg", alt: "Editorial look with layered textures, product line inspiration" },
+  { src: "/images/mood-5.jpg", alt: "Black evening styling with statement bag, product line inspiration" },
+  { src: "/images/mood-6.jpg", alt: "Vintage beige tailoring, product line inspiration" },
+  { src: "/images/mood-7.jpg", alt: "Street style in white shirt and dark denim, product line inspiration" },
+  { src: "/images/mood-8.jpg", alt: "Satin skirt with crisp shirting, product line inspiration" },
+  { src: "/images/mood-9.jpg", alt: "Patterned layered evening look, product line inspiration" },
+];
+
+export default function Capstone() {
+  return (
+    <section id="capstone" className="bg-ink text-paper px-6 py-28 sm:py-36">
+      <div className="mx-auto max-w-6xl">
+        <Reveal>
+          <div className="flex items-baseline gap-6">
+            <span className="label text-red-bright">02</span>
+            <h2 className="font-display text-4xl tracking-tight sm:text-5xl">Featured case study</h2>
+          </div>
+        </Reveal>
+
+        <div className="mt-16 grid gap-10 border-t border-paper/15 pt-14 lg:grid-cols-12">
+          <Reveal className="lg:col-span-7">
+            <h3 className="font-display text-5xl leading-[1.02] tracking-tight sm:text-6xl">
+              Mischief <span className="italic text-red-bright">Maison</span> Studio
+            </h3>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-paper/75">
+              A sustainable womenswear brand concept built end to end as the
+              capstone for the Parsons Fashion Business Essentials course:
+              creative direction, brand identity, market research, strategy,
+              sourcing, production, logistics, marketing, and a three-year
+              financial forecast.
+            </p>
+          </Reveal>
+          <Reveal className="lg:col-span-5" delay={120}>
+            <dl className="grid grid-cols-2 gap-x-8 gap-y-6">
+              <div><dt className="label text-paper/50">Course</dt><dd className="mt-2 text-sm leading-relaxed">Parsons Fashion Business Essentials</dd></div>
+              <div><dt className="label text-paper/50">Year</dt><dd className="mt-2 text-sm leading-relaxed">2026</dd></div>
+              <div><dt className="label text-paper/50">Deliverable</dt><dd className="mt-2 text-sm leading-relaxed">Complete business concept and brand plan</dd></div>
+              <div><dt className="label text-paper/50">Values</dt><dd className="mt-2 text-sm leading-relaxed">Sustainability, women&rsquo;s empowerment, clothing lifecycle, creativity, timeless versatility</dd></div>
+            </dl>
+          </Reveal>
+        </div>
+
+        <Reveal>
+          <blockquote className="font-display mt-24 max-w-3xl text-2xl leading-snug tracking-tight text-paper/90 sm:text-3xl">
+            &ldquo;Our mission is to build a community of stylish women who
+            support creativity, more equal opportunities for other women, and
+            a more sustainable future.&rdquo;
+          </blockquote>
+        </Reveal>
+
+        <div className="mt-24 grid gap-10 md:grid-cols-2">
+          <Reveal>
+            <h4 className="label text-red-bright">The problem</h4>
+            <p className="mt-4 leading-relaxed text-paper/75">
+              Fast fashion is taking over, creating unsustainable products and
+              enormous waste. Women are seeking brands that value ethical
+              products, sustainability, and timeless style rather than
+              trend-based garments. At the same time, women who cannot afford
+              professional attire face fewer opportunities when entering the
+              workforce.
+            </p>
+          </Reveal>
+          <Reveal delay={100}>
+            <h4 className="label text-red-bright">The solution</h4>
+            <p className="mt-4 leading-relaxed text-paper/75">
+              Ethical, sustainable, high-quality pieces with timeless, classy
+              style, from everyday wear to business and formal. A reimagine-or-
+              redirect model keeps the clothing lifecycle positive: pre-loved
+              garments become limited-edition pieces or support women entering
+              the workforce through partner organizations.
+            </p>
+          </Reveal>
+        </div>
+
+        <div className="mt-24">
+          <Reveal>
+            <h4 className="label text-red-bright">The model</h4>
+          </Reveal>
+          <div className="mt-8 grid gap-px bg-paper/15 md:grid-cols-3">
+            {model.map((col, i) => (
+              <Reveal key={col.title} delay={i * 90} className="bg-ink">
+                <div className="h-full p-8">
+                  <h5 className="font-display text-2xl italic tracking-tight">{col.title}</h5>
+                  <ul className="mt-5 space-y-3">
+                    {col.points.map((p) => (
+                      <li key={p} className="flex gap-3 text-sm leading-relaxed text-paper/70">
+                        <span aria-hidden="true" className="mt-[0.4rem] h-1 w-1 shrink-0 rounded-full bg-red-bright" />
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-24 grid items-start gap-10 lg:grid-cols-12">
+          <Reveal className="lg:col-span-5">
+            <div className="img-frame overflow-hidden">
+              <Image
+                src="/images/capstone-customer.jpg"
+                alt="Mischief Maison Studio target customer: city style, effortless and timeless"
+                width={589}
+                height={987}
+                className="h-auto w-full object-cover"
+              />
+            </div>
+          </Reveal>
+          <div className="lg:col-span-7">
+            <Reveal>
+              <h4 className="label text-red-bright">Target customer</h4>
+              <p className="font-display mt-4 text-2xl leading-snug tracking-tight sm:text-3xl">
+                Urban, career-driven women, mid-twenties to forty, who value
+                quality and sustainability over fast fashion.
+              </p>
+            </Reveal>
+            <Reveal delay={100}>
+              <ul className="mt-8 grid gap-x-10 gap-y-3 text-sm leading-relaxed text-paper/70 sm:grid-cols-2">
+                <li>Income $80&ndash;100k, city living</li>
+                <li>Style: classy, effortless, timeless, fun</li>
+                <li>Supports women&rsquo;s empowerment and philanthropy</li>
+                <li>Wants pieces that move between streetwear, business casual, and formal</li>
+                <li>Appreciates staple pieces and one-of-a-kind statements</li>
+                <li>Cares about the economics of the fashion industry</li>
+              </ul>
+            </Reveal>
+            <Reveal delay={160}>
+              <div className="mt-12 grid gap-6 sm:grid-cols-2">
+                {marketing.map((m) => (
+                  <div key={m.title} className="border-t border-paper/15 pt-4">
+                    <h5 className="label text-paper/85">{m.title}</h5>
+                    <p className="mt-2 text-sm leading-relaxed text-paper/60">{m.body}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </div>
+
+        <div className="mt-24 grid gap-10 lg:grid-cols-12">
+          <Reveal className="lg:col-span-7">
+            <h4 className="label text-red-bright">Three-year revenue forecast</h4>
+            <div className="mt-6 overflow-x-auto">
+              <table className="w-full min-w-[520px] text-left text-sm">
+                <thead>
+                  <tr className="label text-paper/50">
+                    <th className="py-3 pr-4 font-medium">Metric</th>
+                    <th className="py-3 pr-4 font-medium">Year 1</th>
+                    <th className="py-3 pr-4 font-medium">Year 2</th>
+                    <th className="py-3 font-medium">Year 3</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {forecast.map((row) => (
+                    <tr key={row[0]} className="border-t border-paper/10">
+                      <td className="py-3 pr-4 text-paper/80">{row[0]}</td>
+                      <td className="py-3 pr-4 tabular-nums text-paper/60">{row[1]}</td>
+                      <td className="py-3 pr-4 tabular-nums text-paper/60">{row[2]}</td>
+                      <td className="py-3 tabular-nums text-paper/90">{row[3]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </Reveal>
+          <Reveal className="lg:col-span-5" delay={100}>
+            <h4 className="label text-red-bright">Funding request: $150,000</h4>
+            <ul className="mt-6 space-y-4">
+              {funding.map((f) => (
+                <li key={f.label} className="flex items-baseline justify-between gap-4 border-t border-paper/10 pt-4">
+                  <span className="text-sm text-paper/80">{f.label}</span>
+                  <span className="text-sm tabular-nums text-paper/60">{f.amount} &middot; {f.pct}</span>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
+
+        <div className="mt-24">
+          <Reveal>
+            <div className="flex flex-wrap items-baseline justify-between gap-4">
+              <h4 className="label text-red-bright">Product line inspiration</h4>
+              <p className="label text-paper/40">Mood board from the capstone</p>
+            </div>
+          </Reveal>
+          <div className="mt-8 columns-2 gap-4 sm:columns-3 [&>*]:mb-4">
+            {mood.map((img, i) => (
+              <Reveal key={img.src} delay={(i % 3) * 80}>
+                <div className="img-frame overflow-hidden">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    width={600}
+                    height={800}
+                    className="h-auto w-full object-cover"
+                  />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
