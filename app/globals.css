@@ -35,6 +35,15 @@ body {
   font-weight: 500;
 }
 
+
+/* Keep the fixed header inside tiny viewports (<=639px):
+   tighter tracking on nav labels only, desktop unchanged. */
+@media (max-width: 639px) {
+  header nav .label {
+    letter-spacing: 0.12em;
+  }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(28px);
