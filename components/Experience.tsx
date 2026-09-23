@@ -77,7 +77,7 @@ export default function Experience() {
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <div className="flex items-baseline gap-6">
-            <span className="label text-red">04</span>
+            <span className="label text-red">02</span>
             <h2 className="font-display text-4xl tracking-tight sm:text-5xl">Experience</h2>
           </div>
         </Reveal>
@@ -89,9 +89,12 @@ export default function Experience() {
           ))}
         </div>
         <Reveal>
-          <h3 className="label mt-20 text-red">Education & credentials</h3>
+          <div id="education" className="mt-24 flex items-baseline gap-6">
+            <span className="label text-red">03</span>
+            <h2 className="font-display text-4xl tracking-tight sm:text-5xl">Education</h2>
+          </div>
         </Reveal>
-        <div className="mt-6">
+        <div className="mt-14">
           {education.map((e, i) => (
             <Reveal key={e.org} delay={i * 60}>
               <Row title="" org={e.org} dates={e.dates} detail={e.detail} />
