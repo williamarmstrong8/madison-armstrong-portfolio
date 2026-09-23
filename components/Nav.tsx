@@ -1,36 +1,41 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#capstone", label: "Case Study" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
+  { href: "/work", label: "Work" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Nav() {
+  const pathname = usePathname();
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-paper/85 backdrop-blur-md border-b border-ink/10">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a
-          href="#top"
-          className="font-display text-lg tracking-tight hover:text-red transition-colors"
+      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
+        <Link
+          href="/"
+          className="font-display whitespace-nowrap text-base tracking-tight hover:text-red transition-colors sm:text-lg"
         >
           Madison Armstrong
-        </a>
-        <ul className="hidden items-center gap-8 sm:flex">
-          {links.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                className="label text-ink-soft hover:text-red transition-colors"
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
+        </Link>
+        <ul className="flex items-center gap-4 sm:gap-8">
+          {links.map((l) => {
+            const active = pathname === l.href || pathname.startsWith(l.href + "/");
+            return (
+              <li key={l.href}>
+                <Link
+                  href={l.href}
+                  aria-current={active ? "page" : undefined}
+                  className={`label transition-colors hover:text-red ${active ? "text-red" : "text-ink-soft"}`}
+                >
+                  {l.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
-        <a href="#contact" className="label text-ink-soft hover:text-red transition-colors sm:hidden">
-          Contact
-        </a>
       </nav>
     </header>
   );

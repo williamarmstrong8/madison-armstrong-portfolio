@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "./Reveal";
+import ProjectNav from "./ProjectNav";
 
 const model = [
   {
@@ -55,33 +57,33 @@ const funding = [
 ];
 
 const mood = [
-  { src: "/images/mood-1.jpg", alt: "Denim jacket with fringe detailing, product line inspiration" },
-  { src: "/images/mood-2.jpg", alt: "Street style look with a fur coat and denim, product line inspiration" },
-  { src: "/images/mood-3.jpg", alt: "Tailored neutral outfit at an appointment, product line inspiration" },
-  { src: "/images/mood-4.jpg", alt: "Editorial look with layered textures, product line inspiration" },
-  { src: "/images/mood-5.jpg", alt: "Black evening styling with statement bag, product line inspiration" },
-  { src: "/images/mood-6.jpg", alt: "Vintage beige tailoring, product line inspiration" },
-  { src: "/images/mood-7.jpg", alt: "Street style in white shirt and dark denim, product line inspiration" },
-  { src: "/images/mood-8.jpg", alt: "Satin skirt with crisp shirting, product line inspiration" },
-  { src: "/images/mood-9.jpg", alt: "Patterned layered evening look, product line inspiration" },
+  { src: "/images/mood-1.jpg", alt: "Street style look with a fur stole and flared denim, product line inspiration" },
+  { src: "/images/mood-2.jpg", alt: "Tailored neutral outfit with a headscarf, product line inspiration" },
+  { src: "/images/mood-3.jpg", alt: "Fur stole over a pastel pleated gown, product line inspiration" },
+  { src: "/images/mood-4.jpg", alt: "Black tee and leather trousers with a statement bag, product line inspiration" },
+  { src: "/images/mood-5.jpg", alt: "Camel and mustard long coats in an editorial spread, product line inspiration" },
+  { src: "/images/mood-6.jpg", alt: "Street style in a white shirt and dark denim, product line inspiration" },
+  { src: "/images/mood-7.jpg", alt: "Satin column skirt with crisp shirting, product line inspiration" },
+  { src: "/images/mood-8.jpg", alt: "Runway look with an open white shirt and a gold fringed hip scarf, product line inspiration" },
 ];
 
 export default function Capstone() {
   return (
-    <section id="capstone" className="bg-ink text-paper px-6 py-28 sm:py-36">
+    <section id="capstone" className="bg-ink text-paper px-6 pb-28 pt-32 sm:pb-36 sm:pt-40">
       <div className="mx-auto max-w-6xl">
         <Reveal>
-          <div className="flex items-baseline gap-6">
-            <span className="label text-red-bright">02</span>
-            <h2 className="font-display text-4xl tracking-tight sm:text-5xl">Featured case study</h2>
-          </div>
+          <p className="label text-paper/50">
+            <Link href="/work" className="hover:text-red-bright transition-colors">Work</Link>
+            <span className="mx-3 text-paper/30">/</span>
+            <span className="text-red-bright">Featured case study</span>
+          </p>
         </Reveal>
 
-        <div className="mt-16 grid gap-10 border-t border-paper/15 pt-14 lg:grid-cols-12">
+        <div className="mt-10 grid gap-10 border-t border-paper/15 pt-14 lg:grid-cols-12">
           <Reveal className="lg:col-span-7">
-            <h3 className="font-display text-5xl leading-[1.02] tracking-tight sm:text-6xl">
+            <h1 className="font-display text-5xl leading-[1.02] tracking-tight sm:text-6xl">
               Mischief <span className="italic text-red-bright">Maison</span> Studio
-            </h3>
+            </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-paper/75">
               A sustainable womenswear brand concept built end to end as the
               capstone for the Parsons Fashion Business Essentials course:
@@ -110,7 +112,7 @@ export default function Capstone() {
 
         <div className="mt-24 grid gap-10 md:grid-cols-2">
           <Reveal>
-            <h4 className="label text-red-bright">The problem</h4>
+            <h2 className="label text-red-bright">The problem</h2>
             <p className="mt-4 leading-relaxed text-paper/75">
               Fast fashion is taking over, creating unsustainable products and
               enormous waste. Women are seeking brands that value ethical
@@ -121,7 +123,7 @@ export default function Capstone() {
             </p>
           </Reveal>
           <Reveal delay={100}>
-            <h4 className="label text-red-bright">The solution</h4>
+            <h2 className="label text-red-bright">The solution</h2>
             <p className="mt-4 leading-relaxed text-paper/75">
               Ethical, sustainable, high-quality pieces with timeless, classy
               style, from everyday wear to business and formal. A reimagine-or-
@@ -134,7 +136,7 @@ export default function Capstone() {
 
         <div className="mt-24">
           <Reveal>
-            <h4 className="label text-red-bright">The model</h4>
+            <h2 className="label text-red-bright">The model</h2>
           </Reveal>
           <div className="mt-8 grid gap-px bg-paper/15 md:grid-cols-3">
             {model.map((col, i) => (
@@ -169,7 +171,7 @@ export default function Capstone() {
           </Reveal>
           <div className="lg:col-span-7">
             <Reveal>
-              <h4 className="label text-red-bright">Target customer</h4>
+              <h2 className="label text-red-bright">Target customer</h2>
               <p className="font-display mt-4 text-2xl leading-snug tracking-tight sm:text-3xl">
                 Urban, career-driven women, mid-twenties to forty, who value
                 quality and sustainability over fast fashion.
@@ -199,8 +201,8 @@ export default function Capstone() {
         </div>
 
         <div className="mt-24 grid gap-10 lg:grid-cols-12">
-          <Reveal className="lg:col-span-7">
-            <h4 className="label text-red-bright">Three-year revenue forecast</h4>
+          <Reveal className="min-w-0 lg:col-span-7">
+            <h2 className="label text-red-bright">Three-year revenue forecast</h2>
             <div className="mt-6 overflow-x-auto">
               <table className="w-full min-w-[520px] text-left text-sm">
                 <thead>
@@ -225,7 +227,7 @@ export default function Capstone() {
             </div>
           </Reveal>
           <Reveal className="lg:col-span-5" delay={100}>
-            <h4 className="label text-red-bright">Funding request: $150,000</h4>
+            <h2 className="label text-red-bright">Funding request: $150,000</h2>
             <ul className="mt-6 space-y-4">
               {funding.map((f) => (
                 <li key={f.label} className="flex items-baseline justify-between gap-4 border-t border-paper/10 pt-4">
@@ -240,7 +242,7 @@ export default function Capstone() {
         <div className="mt-24">
           <Reveal>
             <div className="flex flex-wrap items-baseline justify-between gap-4">
-              <h4 className="label text-red-bright">Product line inspiration</h4>
+              <h2 className="label text-red-bright">Product line inspiration</h2>
               <p className="label text-paper/40">Mood board from the capstone</p>
             </div>
           </Reveal>
@@ -260,6 +262,7 @@ export default function Capstone() {
             ))}
           </div>
         </div>
+        <ProjectNav slug="mischief-maison" dark />
       </div>
     </section>
   );

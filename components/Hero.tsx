@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Reveal from "./Reveal";
 
 export default function Hero() {
@@ -23,13 +24,13 @@ export default function Hero() {
             </p>
           </Reveal>
           <Reveal delay={320}>
-            <a
-              href="#capstone"
+            <Link
+              href="/work"
               className="label group inline-flex items-center gap-3 text-ink hover:text-red transition-colors"
             >
               View the work
-              <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-y-1">&darr;</span>
-            </a>
+              <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+            </Link>
           </Reveal>
         </div>
       </div>
